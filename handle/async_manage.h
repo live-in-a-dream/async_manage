@@ -19,9 +19,11 @@ namespace async{
         //TODO FUN_EXPLAIN(添加异步任务,@author LXC) 2023/9/12 0012 21:39
         void AddTask(std::unique_ptr<AsyncTask> asyncTask);
 
+        //TODO FUN_EXPLAIN(当成功的时候回调,@author LXC) 2023/9/18 0018 19:36
         void OnAsyncSuccess();
-        void OnAsyncComplete();
 
+        //TODO FUN_EXPLAIN(当完成的时候回调,@author LXC) 2023/9/18 0018 19:36
+        void OnAsyncComplete();
 
         //TODO FUN_EXPLAIN(成功请求后-1,@author LXC) 2023/9/7 0007 9:18
         void HandleTask();

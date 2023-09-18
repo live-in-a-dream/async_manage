@@ -23,7 +23,6 @@ namespace async{
 
         using OnAsyncTaskCompleteCallback = OnceClosure;
         using OnAsyncTaskSuccessCallback = OnceClosure;
-
         using AddChildTaskCallback = std::function<std::unique_ptr<AsyncTask>()>;
 
         //TODO FUN_EXPLAIN(运行任务,@author LXC) 2023/9/12 0012 21:55
