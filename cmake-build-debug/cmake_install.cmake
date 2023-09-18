@@ -1,4 +1,4 @@
-# Install script for directory: F:/Project/ClionProject/async_task_lib
+# Install script for directory: F:/Project/ClionProject/async_task/async_task_lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "F:/Project/ClionProject/async_task_lib/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "F:/Project/ClionProject/async_task/async_task_lib/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
