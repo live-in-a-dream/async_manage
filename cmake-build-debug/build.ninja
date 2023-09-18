@@ -49,17 +49,19 @@ cmake_ninja_workdir = F$:/Project/ClionProject/async_task/async_task_lib/cmake-b
 
 build cmake_object_order_depends_target_async_task_lib: phony || CMakeFiles/async_task_lib.dir
 
-build CMakeFiles/async_task_lib.dir/async_task_global.cpp.obj: CXX_COMPILER__async_task_lib_unscanned_Debug F$:/Project/ClionProject/async_task/async_task_lib/async_task_global.cpp || cmake_object_order_depends_target_async_task_lib
+build CMakeFiles/async_task_lib.dir/include/async_task_global.cpp.obj: CXX_COMPILER__async_task_lib_unscanned_Debug F$:/Project/ClionProject/async_task/async_task_lib/include/async_task_global.cpp || cmake_object_order_depends_target_async_task_lib
   DEFINES = -Dasync_task_lib_EXPORTS
-  DEP_FILE = CMakeFiles\async_task_lib.dir\async_task_global.cpp.obj.d
+  DEP_FILE = CMakeFiles\async_task_lib.dir\include\async_task_global.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -IF:/Project/ClionProject/async_task/async_task_lib/include -IF:/Project/ClionProject/async_task/async_task_lib/handle
   OBJECT_DIR = CMakeFiles\async_task_lib.dir
-  OBJECT_FILE_DIR = CMakeFiles\async_task_lib.dir
+  OBJECT_FILE_DIR = CMakeFiles\async_task_lib.dir\include
 
 build CMakeFiles/async_task_lib.dir/handle/async_task.cc.obj: CXX_COMPILER__async_task_lib_unscanned_Debug F$:/Project/ClionProject/async_task/async_task_lib/handle/async_task.cc || cmake_object_order_depends_target_async_task_lib
   DEFINES = -Dasync_task_lib_EXPORTS
   DEP_FILE = CMakeFiles\async_task_lib.dir\handle\async_task.cc.obj.d
   FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -IF:/Project/ClionProject/async_task/async_task_lib/include -IF:/Project/ClionProject/async_task/async_task_lib/handle
   OBJECT_DIR = CMakeFiles\async_task_lib.dir
   OBJECT_FILE_DIR = CMakeFiles\async_task_lib.dir\handle
 
@@ -67,6 +69,7 @@ build CMakeFiles/async_task_lib.dir/handle/async_manage.cc.obj: CXX_COMPILER__as
   DEFINES = -Dasync_task_lib_EXPORTS
   DEP_FILE = CMakeFiles\async_task_lib.dir\handle\async_manage.cc.obj.d
   FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -IF:/Project/ClionProject/async_task/async_task_lib/include -IF:/Project/ClionProject/async_task/async_task_lib/handle
   OBJECT_DIR = CMakeFiles\async_task_lib.dir
   OBJECT_FILE_DIR = CMakeFiles\async_task_lib.dir\handle
 
@@ -74,6 +77,7 @@ build CMakeFiles/async_task_lib.dir/handle/async_task_util.cc.obj: CXX_COMPILER_
   DEFINES = -Dasync_task_lib_EXPORTS
   DEP_FILE = CMakeFiles\async_task_lib.dir\handle\async_task_util.cc.obj.d
   FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -IF:/Project/ClionProject/async_task/async_task_lib/include -IF:/Project/ClionProject/async_task/async_task_lib/handle
   OBJECT_DIR = CMakeFiles\async_task_lib.dir
   OBJECT_FILE_DIR = CMakeFiles\async_task_lib.dir\handle
 
@@ -85,7 +89,7 @@ build CMakeFiles/async_task_lib.dir/handle/async_task_util.cc.obj: CXX_COMPILER_
 #############################################
 # Link the shared library libasync_task_lib.dll
 
-build libasync_task_lib.dll libasync_task_lib.dll.a: CXX_SHARED_LIBRARY_LINKER__async_task_lib_Debug CMakeFiles/async_task_lib.dir/async_task_global.cpp.obj CMakeFiles/async_task_lib.dir/handle/async_task.cc.obj CMakeFiles/async_task_lib.dir/handle/async_manage.cc.obj CMakeFiles/async_task_lib.dir/handle/async_task_util.cc.obj
+build libasync_task_lib.dll libasync_task_lib.dll.a: CXX_SHARED_LIBRARY_LINKER__async_task_lib_Debug CMakeFiles/async_task_lib.dir/include/async_task_global.cpp.obj CMakeFiles/async_task_lib.dir/handle/async_task.cc.obj CMakeFiles/async_task_lib.dir/handle/async_manage.cc.obj CMakeFiles/async_task_lib.dir/handle/async_task_util.cc.obj
   LANGUAGE_COMPILE_FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\async_task_lib.dir

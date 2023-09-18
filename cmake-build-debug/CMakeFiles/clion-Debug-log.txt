@@ -1,4 +1,4 @@
 "F:\software\CLion 2023.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=F:/software/CLion 2023.2/bin/ninja/win/x64/ninja.exe" -G Ninja -S F:\Project\ClionProject\async_task\async_task_lib -B F:\Project\ClionProject\async_task\async_task_lib\cmake-build-debug
--- Configuring done (0.1s)
+-- Configuring done (0.0s)
 -- Generating done (0.0s)
 -- Build files have been written to: F:/Project/ClionProject/async_task/async_task_lib/cmake-build-debug
