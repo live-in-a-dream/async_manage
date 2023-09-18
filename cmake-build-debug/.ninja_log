@@ -1,0 +1,9 @@
+# ninja log v5
+747	842	7167398070929664	libasync_task_lib.dll	506778b30bdbe6f6
+0	124	7167423880138201	build.ninja	667305d307b5e0e4
+11	62	7167395330301490	CMakeFiles/async_task_lib.dir/async_task_global.cpp.obj	45a3e3ecfe43b6ca
+747	842	7167398070929664	libasync_task_lib.dll.a	506778b30bdbe6f6
+5	52	7167397423035947	CMakeFiles/async_task_lib.dir/include/async_task_global.cpp.obj	e1e84509efd28980
+10	617	7167398068700879	CMakeFiles/async_task_lib.dir/handle/async_task_util.cc.obj	376d8804a6eaacff
+7	730	7167398069831136	CMakeFiles/async_task_lib.dir/handle/async_manage.cc.obj	a1a8af4f33efe51b
+2	747	7167398070001170	CMakeFiles/async_task_lib.dir/handle/async_task.cc.obj	a521c55ad237b66c
