@@ -7,7 +7,7 @@
 #include "async_task.h"
 
 namespace async{
-    class ASYNC_TASK AsyncManage {
+    class AsyncManage {
     public:
         explicit AsyncManage();
 

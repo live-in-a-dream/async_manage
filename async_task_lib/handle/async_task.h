@@ -9,10 +9,10 @@
 #include <functional>
 #include <memory>
 #include <atomic>
-#include "../include/async_task_global.h"
+#include "async.h"
 
 namespace async{
-    class ASYNC_TASK AsyncTask {
+    class AsyncTask {
     public:
         explicit AsyncTask();
 

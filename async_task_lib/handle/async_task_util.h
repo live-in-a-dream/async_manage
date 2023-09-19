@@ -9,14 +9,14 @@
 #include <functional>
 #include <memory>
 #include <atomic>
-#include "../include/async_task_global.h"
+#include "async.h"
 
 
 namespace async{
 
     class AsyncTask;
 
-    class ASYNC_TASK AsyncTaskUtil {
+    class AsyncTaskUtil {
     public:
 
         //TODO FUN_EXPLAIN(校验任务完成,@author LXC) 2023/9/13 0013 14:33
