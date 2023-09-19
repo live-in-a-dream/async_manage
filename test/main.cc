@@ -3,7 +3,23 @@
 //
 
 #include "handle/async_manage.h"
+#include "http_test.h"
 #include "gtest/gtest.h"
+
+
+void HttpTest01_01OnResultCallback(HttpTest * httpTest01_01,std::unique_ptr<std::string> body){
+    std::cout << "HttpTest01_01OnResultCallback" << std::endl;
+}
+
+void HttpTest01OnResultCallback(HttpTest * httpTest01,std::unique_ptr<std::string> body){
+    std::cout << "HttpTest01OnResultCallback" << std::endl;
+
+    std::unique_ptr<HttpTest> httpTest01_01 = std::make_unique<HttpTest>();
+
+    httpTest01_01->SetOnResultCallback(HttpTest01_01OnResultCallback);
+
+    httpTest01->AddChildTask(std::move(httpTest01_01));
+}
 
 TEST(AsyncTaskLibTest, Test01)
 {
@@ -16,6 +32,12 @@ TEST(AsyncTaskLibTest, Test01)
     asyncManage.SetOnComplete([](){
         std::cout << "OnComplete" << std::endl;
     });
+
+    std::unique_ptr<HttpTest> httpTest01 = std::make_unique<HttpTest>();
+
+    httpTest01->SetOnResultCallback(HttpTest01OnResultCallback);
+
+    asyncManage.AddTask(std::move(httpTest01));
 
     asyncManage.HandleTask();
 

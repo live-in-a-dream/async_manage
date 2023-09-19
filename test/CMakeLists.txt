@@ -1,6 +1,8 @@
 add_subdirectory(googletest)
 
 add_executable(program_test main.cc
+        http_test.cc
+        http_test.h
 )
 
 target_link_libraries(program_test

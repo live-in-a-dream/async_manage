@@ -45,6 +45,8 @@ namespace async{
         OnceClosure onFail_;
 
         std::set<std::unique_ptr<AsyncTask>> asyncTasks_;
+
+        bool isHandle_;
     };
 }
 

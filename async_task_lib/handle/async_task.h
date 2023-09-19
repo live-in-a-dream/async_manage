@@ -55,6 +55,8 @@ namespace async{
 
         std::atomic<int> success_num_{0};
 
+        bool isHandle_;
+
         OnAsyncTaskCompleteCallback onAsyncTaskCompleteCallback_;
 
         OnAsyncTaskSuccessCallback onAsyncTaskSuccessCallback_;

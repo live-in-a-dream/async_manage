@@ -26,9 +26,18 @@ namespace async{
     }
 
     void AsyncTask::OnSuccess() {
+        isHandle_ = false;
+
         //TODO LOGIC(运行成功后再运行子任务,@author LXC) 2023/9/13 0013 10:53
         for (const auto& childAsyncTask: childAsyncTasks_) {
             childAsyncTask->HandleTask();
+        }
+
+        isHandle_ = true;
+
+        bool complete = AsyncTaskUtil::CheckTaskComplete(childAsyncTasks_);
+        if(complete){
+            childAsyncTasks_.clear();
         }
 
         //TODO LOGIC(当子任务都成功后-则-1,@author LXC) 2023/9/13 0013 14:32
@@ -84,7 +93,10 @@ namespace async{
             return;
         }
 
-        childAsyncTasks_.clear();
+        if(isHandle_){
+            childAsyncTasks_.clear();
+        }
+
         complete_num_.fetch_sub(1);
         if(onAsyncTaskCompleteCallback_){
             onAsyncTaskCompleteCallback_();

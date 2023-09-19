@@ -45,7 +45,10 @@ namespace async{
         bool complete = AsyncTaskUtil::CheckTaskComplete(asyncTasks_);
 
         if(complete){
-            asyncTasks_.clear();
+            if(isHandle_){
+                asyncTasks_.clear();
+            }
+
             if(onComplete_){
                 onComplete_();
             }
@@ -53,16 +56,26 @@ namespace async{
     }
 
     void AsyncManage::HandleTask() {
-
+        isHandle_ = false;
+        //TODO LOGIC(如何没有任务直接返回,@author LXC) 2023/9/19 0019 15:38
         if(asyncTasks_.empty()){
             OnAsyncSuccess();
 
             OnAsyncComplete();
+            return;
         }
 
         for (const auto& asyncTask: asyncTasks_) {
             asyncTask->HandleTask();
         }
+
+        isHandle_ = true;
+
+        bool complete = AsyncTaskUtil::CheckTaskComplete(asyncTasks_);
+        if(complete){
+            asyncTasks_.clear();
+        }
+
     }
 
     void AsyncManage::SetOnComplete(OnceClosure onComplete) {
