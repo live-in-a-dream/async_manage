@@ -1,19 +1,12 @@
 cmake_minimum_required(VERSION 3.26)
-project(async_task_lib)
+project(async_task)
 
 set(CMAKE_CXX_STANDARD 17)
 
+include_directories(async_task_lib)
 
+add_subdirectory(async_task_lib)
 
-include_directories(include)
-include_directories(handle)
+enable_testing()
+add_subdirectory(test)
 
-
-add_library(async_task_lib SHARED include/async_task_global.h
-        include/async_task_global.cpp
-        handle/async_task.cc
-        handle/async_task.h
-        handle/async_manage.cc
-        handle/async_manage.h
-        handle/async_task_util.cc
-        handle/async_task_util.h)

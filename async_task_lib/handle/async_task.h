@@ -9,7 +9,7 @@
 #include <functional>
 #include <memory>
 #include <atomic>
-#include "async_task_global.h"
+#include "../include/async_task_global.h"
 
 namespace async{
     class ASYNC_TASK AsyncTask {

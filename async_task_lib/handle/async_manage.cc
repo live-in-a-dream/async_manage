@@ -53,6 +53,13 @@ namespace async{
     }
 
     void AsyncManage::HandleTask() {
+
+        if(asyncTasks_.empty()){
+            OnAsyncSuccess();
+
+            OnAsyncComplete();
+        }
+
         for (const auto& asyncTask: asyncTasks_) {
             asyncTask->HandleTask();
         }
