@@ -34,7 +34,7 @@ namespace async{
         //TODO FUN_EXPLAIN(成功,@author LXC) 2023/9/7 0007 9:18
         virtual void OnSuccess();
 
-        //TODO FUN_EXPLAIN(该异步任务运行完后运行,@author LXC) 2023/9/12 0012 21:55
+        //TODO FUN_EXPLAIN(添加子任务,@author LXC) 2023/9/12 0012 21:55
         void AddChildTask(std::unique_ptr<AsyncTask> childAsyncTask);
 
     public:
@@ -61,12 +61,16 @@ namespace async{
 
         OnAsyncTaskSuccessCallback onAsyncTaskSuccessCallback_;
     private:
+        //TODO FUN_EXPLAIN(子任务成功后调用,@author LXC) 2023/9/21 0021 8:16
         void OnAsyncSuccess();
 
+        //TODO FUN_EXPLAIN(子任务完成后调用,@author LXC) 2023/9/21 0021 8:17
         void OnAsyncComplete();
 
+        //TODO FUN_EXPLAIN(通知成功的回调函数,@author LXC) 2023/9/21 0021 8:17
         void NotificationSuccess();
 
+        //TODO FUN_EXPLAIN(通知完成的回调函数,@author LXC) 2023/9/21 0021 8:17
         void NotificationComplete();
     };
 

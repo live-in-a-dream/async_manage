@@ -25,7 +25,7 @@ namespace async{
         //TODO FUN_EXPLAIN(当完成的时候回调,@author LXC) 2023/9/18 0018 19:36
         void OnAsyncComplete();
 
-        //TODO FUN_EXPLAIN(成功请求后-1,@author LXC) 2023/9/7 0007 9:18
+        //TODO FUN_EXPLAIN(处理任务,@author LXC) 2023/9/7 0007 9:18
         void HandleTask();
 
         //TODO FUN_EXPLAIN(设置完成的回调,@author LXC) 2023/9/7 0007 9:18
